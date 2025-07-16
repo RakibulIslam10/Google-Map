@@ -14,7 +14,6 @@ class HomePage extends GetView<HomeController> {
     return Scaffold(
       body: Obx(() {
         if (controller.myLocation.value.latitude == 0 && controller.myLocation.value.longitude == 0) {
-          // Location not ready, loading দেখাও
           return Center(child: CircularProgressIndicator());
         }
         return GoogleMap(
